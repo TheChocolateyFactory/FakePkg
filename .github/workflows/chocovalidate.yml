@@ -8,11 +8,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      # Checkout your repository
-      - uses: actions/checkout@v4
   # Run the shared workflow
   shared:
     uses: TheChocolateyFactory/.github/.github/workflows/ChocoValidate.yml@main
