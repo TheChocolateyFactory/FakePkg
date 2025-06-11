@@ -1,0 +1,18 @@
+name: 🍫 Validate Choco
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout your repository
+      - uses: actions/checkout@v4
+      # Run the shared workflow
+      - uses: TheChocolateyFactory/.github/shared-workflow/ChocoValidate.yml@maino
+        with:
+          nuspec_path: ./FakePkg.nuspec
