@@ -13,6 +13,6 @@ jobs:
       # Checkout your repository
       - uses: actions/checkout@v4
       # Run the shared workflow
-      - uses: TheChocolateyFactory/.github/shared-workflow/ChocoValidate.yml@main
+      - uses: TheChocolateyFactory/.github/.github/workflows/ChocoValidate.yml@main
         with:
           nuspec_path: ./FakePkg.nuspec
